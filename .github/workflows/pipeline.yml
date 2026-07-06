@@ -11,4 +11,5 @@ jobs:
       - name: Checkout current repository
         uses: actions/checkout@v4
 
-      - run: echo "This will now execute."
+      - name: Execute command
+        run: echo "This will now execute."
