@@ -8,10 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Wrong Repository
+      - name: Checkout current repository
         uses: actions/checkout@v4
-        with:
-          repository: Raghava/repo-does-not-exist
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: echo "This will never execute."
+      - run: echo "This will now execute."
