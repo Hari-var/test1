@@ -1,0 +1,13 @@
+# Intentionally failing workflow: invalid action ref to cause action resolution failure
+name: CI Fail Action
+on:
+  push:
+    branches: [ 'head' ]
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (invalid ref)
+        uses: actions/checkout@v999
+      - name: Echo
+        run: echo "This step won't be reached because checkout uses invalid ref"
