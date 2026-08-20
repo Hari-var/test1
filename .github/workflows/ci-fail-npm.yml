@@ -1,8 +1,7 @@
 # Intentionally failing workflow: npm ci will fail if package-lock.json is not present
 name: CI Fail NPM
 on:
-  push:
-    branches: [ 'head' ]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest

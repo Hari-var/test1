@@ -1,8 +1,7 @@
 # Intentionally failing workflow: invalid action ref to cause action resolution failure
 name: CI Fail Action
 on:
-  push:
-    branches: [ 'head' ]
+  workflow_dispatch:
 jobs:
   fail:
     runs-on: ubuntu-latest

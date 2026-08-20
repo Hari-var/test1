@@ -1,8 +1,7 @@
 # Intentionally failing workflow: pip install will fail if requirements.txt is missing
 name: CI Fail Py
 on:
-  push:
-    branches: [ 'head' ]
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
