@@ -6,7 +6,7 @@ jobs:
   fail:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (invalid ref)
-        uses: actions/checkout@v999
+      - name: Checkout (fixed ref)
+        uses: actions/checkout@v4
       - name: Echo
-        run: echo "This step won't be reached because checkout uses invalid ref"
+        run: echo "This step will run after checkout succeeds"
